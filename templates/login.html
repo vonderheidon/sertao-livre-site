@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de login</title>
+</head>
+<body style="background-color:white;">
+    <a href="/">Inicio</a>
+    <h1>Página de login - Vendedores</h1>
+    <form method="POST" action="/login">
+        <div>
+            <label>Usuario</label>
+            <br><input type="text" name="usuario" required/><br>
+        </div>
+        <div>
+            <br><label>Senha</label>
+            <br><input type="password" name="senha" required/><br>
+        </div>
+        {% if errou==1 %}
+        <div>
+            <label style="color:Tomato;">Usuário ou senha incorretos.</label>
+        </div>
+        {% endif %}
+        <div>
+            <br><button type="submit">Entrar</button>
+        </div>
+    </form>
+</body>
+</html>
